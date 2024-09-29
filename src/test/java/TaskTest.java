@@ -18,10 +18,10 @@ class TaskTest {
     // Test for invalid ID (null or length > 10)
     public void testId() {
         assertThrows(IllegalArgumentException.class, () -> {
-            new Task(null, "Submit Assignments", "Submit assignments by Sunday.");
+            new Task(null, "Submit Assignments", "Submit assignments by Sunday");
         });
         assertThrows(IllegalArgumentException.class, () -> {
-            new Task("12345678910", "Submit Assignments", "Submit assignments by Sunday.");
+            new Task("12345678910", "Submit Assignments", "Submit assignments by Sunday");
         });
     }
 
@@ -30,10 +30,10 @@ class TaskTest {
     // Test for invalid task name (null or length > 20)
     public void testName() {
         assertThrows(IllegalArgumentException.class, () -> {
-            new Task("12345678", null, "Submit assignments by Sunday.");
+            new Task("12345678", null, "Submit assignments by Sunday");
         });
         assertThrows(IllegalArgumentException.class, () -> {
-            new Task("12345678", "Submit All Homework Assignments", "Submit assignments by Sunday.");
+            new Task("12345678", "Submit All Homework Assignments", "Submit assignments by Sunday");
         });
     }
 
@@ -48,5 +48,5 @@ class TaskTest {
             new Task("12345678", "Submit Assignments", "Make sure that you submit all of your assignments by Sunday, otherwise they will be considered late");
         });
     }
-    
+
 }
